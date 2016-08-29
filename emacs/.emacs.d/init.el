@@ -14,7 +14,11 @@
 (load custom-file t)
 
 ;; basics
-(global-linum-mode 1)
+(use-package linum
+  :init
+  (setq linum-format "%d ")
+  :config
+  (global-linum-mode t))
 
 (use-package neotree
   :ensure t)
