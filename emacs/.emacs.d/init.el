@@ -8,6 +8,7 @@
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
+(setq use-package-always-ensure t)
 (require 'use-package)
 
 ;; custom
@@ -16,16 +17,12 @@
 
 ;; basics
 (use-package linum
-  :init
-  (setq linum-format "%d ")
-  :config
-  (global-linum-mode t))
+  :init (setq linum-format "%d ")
+  :config (global-linum-mode t))
 
-(use-package neotree
-  :ensure t)
+(use-package neotree)
 
 (use-package markdown-mode
-  :ensure t
   :commands (markdown-mode gfm-mode)
   :mode (("README\\.md\\'" . gfm-mode)
 	 ("\\.md\\'" . markdown-mode)
