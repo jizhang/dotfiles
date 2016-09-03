@@ -16,6 +16,8 @@
 (load custom-file t)
 
 ;; basics
+(setq-default indent-tabs-mode nil)
+
 (use-package linum
   :init (setq linum-format "%d ")
   :config (global-linum-mode t))
