@@ -17,7 +17,10 @@
 
 ;; basics
 (setq-default indent-tabs-mode nil)
+(global-set-key (kbd "C-x C-b") 'ibuffer)
+(put 'dired-find-alternate-file 'disabled nil)
 
+;; packages
 (use-package linum
   :init (setq linum-format "%d ")
   :config (global-linum-mode t))
